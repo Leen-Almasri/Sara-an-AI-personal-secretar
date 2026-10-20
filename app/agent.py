@@ -80,7 +80,7 @@ _TOOL_REMINDER = (
 # Sara always answers in Saudi Arabic, including when these safety messages replace a reply.
 _MESSAGES = {
     "not_booked": "للأسف ما انحجز أي موعد في الجدول للحين. عطني التاريخ والوقت والمدة اللي تبيها وأتأكد منها أول 😊",
-    "tool_failed": "ما قدرت أتأكد من الجدول الحين، وما انحجز أي شي. جرب مرة ثانية بعد شوي 🙏",
+    "tool_failed": "ما قدرت أتأكد من الجدول الحين، وما انحجز أي شي. جرب مرة ثانية بعد شوي ",
     "no_reply": "سامحني، ما قدرت أرد عليك الحين، وما انحجز أي شي. ممكن تعيد كلامك بصيغة ثانية؟",
     "booked": "تم حجز الموعد في الجدول ✅ {date} الساعة {start_time} لمدة {minutes} دقيقة.",
 }
