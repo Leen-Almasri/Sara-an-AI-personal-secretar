@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sara AI Personal Secretary</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="header-title">
+        <span class="header-name">Sara</span>
+        <span class="header-subtitle">AI Personal Secretary</span>
+      </div>
+      <span class="status-dot" title="Online"></span>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite"></main>
+
+    <div id="typing-indicator" class="typing-indicator hidden">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div id="error-banner" class="error-banner hidden"></div>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="chat-input"
+        type="text"
+        autocomplete="off"
+        placeholder="Type a message to Sara..."
+        maxlength="2000"
+        required
+      />
+      <button id="send-button" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

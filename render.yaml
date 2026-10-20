@@ -1,0 +1,36 @@
+# Render Blueprint: one free web service running the FastAPI app (UI + API).
+# Secrets are NOT stored here: `sync: false` makes Render ask for each value in its
+# dashboard when the Blueprint is first created. Never commit real values.
+services:
+  - type: web
+    name: sara-ai-secretary
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    # One worker on purpose: chat sessions and the booking lock live in this process.
+    # Render provides $PORT (default 10000); the server must listen on 0.0.0.0.
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      # Render defaults new services to Python 3.14; this project is tested on 3.12.
+      - key: PYTHON_VERSION
+        value: 3.12.5
+      - key: TIMEZONE
+        value: Asia/Riyadh
+      - key: LOG_LEVEL
+        value: INFO
+      # --- secrets / account-specific values: entered in the Render dashboard ---
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REFRESH_TOKEN
+        sync: false
+      - key: GOOGLE_CALENDAR_ID
+        sync: false
