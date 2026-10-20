@@ -323,7 +323,7 @@ Sara:   أبشر، تم الحجز ✅
 If the calendar cannot be reached, Sara says so and books nothing:
 
 ```text
-Sara:   ما قدرت أتأكد من الجدول الحين، وما انحجز أي شي. جرب مرة ثانية بعد شوي 🙏
+Sara:   ما قدرت أتأكد من الجدول الحين، وما انحجز أي شي. جرب مرة ثانية بعد شوي 
 ```
 
 ## Deployment
